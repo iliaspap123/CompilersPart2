@@ -16,8 +16,10 @@ class Main {
 	    TableVisitor eval = new TableVisitor();
       Goal root = parser.Goal();
       System.out.println(root.accept(eval, null));
-      System.out.println(" Map Elements");
+      System.out.println(" Var Elements");
       System.out.println("\t" + eval.Table);
+      System.out.println(" Class Elements");
+      System.out.println("\t" + eval.ClassTypes);
 	}
 	catch(ParseException ex){
 	    System.out.println(ex.getMessage());
