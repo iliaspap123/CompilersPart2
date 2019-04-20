@@ -4,20 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.ArrayList; // import the ArrayList class
 
-class ClassForm {
-
-  public HashMap<String,String> ClassVars = new HashMap();
-  public HashMap<String,Map<String,String>> Methods = new HashMap();
-
-
-}
 
 
 public class TableVisitor extends GJDepthFirst<String, Map> {
 
   public HashMap<String,ArrayList<String>> Table = new HashMap();
-  public HashMap<String,Map<String,String>> ClassTypes = new HashMap();
+  //public HashMap<String,Map<String,String>> ClassTypes = new HashMap();
 
+  public HashMap<String,ClassForm> ClassTypes = new HashMap();
 
      /**
       * f0 -> "class"
@@ -29,18 +23,19 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
       */
      public String visit(ClassDeclaration n, Map argu) {
 
-        argu = new HashMap();
+        //argu = new HashMap();
         n.f0.accept(this, argu);
         String className = n.f1.accept(this, argu);
         n.f2.accept(this, argu);
 
-        Map<String,String> vars = new HashMap();
-
+        //Map<String,String> vars = new HashMap();
+        ClassForm elem = new ClassForm();
+        ClassTypes.put(className,elem);
 
         //String varDecl = n.f3.accept(this, argu);
         String varDecl = "";
         if(n.f3.present()) {
-          varDecl = n.f3.accept(this, vars);
+          varDecl = n.f3.accept(this, elem.ClassVars);
         }
         else {
           varDecl = "hi";
@@ -54,12 +49,12 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
         //Map<String,String> methods = new HashMap();
         //String varDecl = n.f3.accept(this, argu);
         if(n.f4.present()) {
-          varDecl = n.f4.accept(this, vars);
+          varDecl = n.f4.accept(this, elem.Methods);
         }
         else {
           varDecl = "hi";
         }
-        ClassTypes.put(className,vars);
+        //ClassTypes.put(className,vars);
 
         n.f5.accept(this, argu);
 
@@ -68,38 +63,39 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
         return className;
      }
 
-     /**
-      * f0 -> "class"
-      * f1 -> Identifier()
-      * f2 -> "extends"
-      * f3 -> Identifier()
-      * f4 -> "{"
-      * f5 -> ( VarDeclaration() )*
-      * f6 -> ( MethodDeclaration() )*
-      * f7 -> "}"
-      */
-     public String visit(ClassExtendsDeclaration n, Map argu) {
-
-        String className = n.f0.accept(this, argu);
-        n.f1.accept(this, argu);
-        n.f2.accept(this, argu);
-        n.f3.accept(this, argu);
-        n.f4.accept(this, argu);
-        String superClass = "";
-        if(n.f5.present()) {
-          superClass = n.f5.accept(this, argu);
-        }
-        else {
-          superClass = "hi";
-        }
-        n.f6.accept(this, argu);
-        n.f7.accept(this, argu);
-        //System.out.println(className + " + " + superClass);
-
-        //ClassTypes.put(className,superClass);
-
-        return className;
-     }
+     //
+     // /**
+     //  * f0 -> "class"
+     //  * f1 -> Identifier()
+     //  * f2 -> "extends"
+     //  * f3 -> Identifier()
+     //  * f4 -> "{"
+     //  * f5 -> ( VarDeclaration() )*
+     //  * f6 -> ( MethodDeclaration() )*
+     //  * f7 -> "}"
+     //  */
+     // public String visit(ClassExtendsDeclaration n, String argu) {
+     //
+     //    String className = n.f0.accept(this, argu);
+     //    n.f1.accept(this, argu);
+     //    n.f2.accept(this, argu);
+     //    n.f3.accept(this, argu);
+     //    n.f4.accept(this, argu);
+     //    String superClass = "";
+     //    if(n.f5.present()) {
+     //      superClass = n.f5.accept(this, argu);
+     //    }
+     //    else {
+     //      superClass = "hi";
+     //    }
+     //    n.f6.accept(this, argu);
+     //    n.f7.accept(this, argu);
+     //    //System.out.println(className + " + " + superClass);
+     //
+     //    //ClassTypes.put(className,superClass);
+     //
+     //    return className;
+     // }
 
 
      /**
@@ -118,22 +114,25 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
       * f12 -> "}"
       */
      public String visit(MethodDeclaration n, Map argu) {
+
+        //ClassForm method = ClassTypes.get(argu);
         n.f0.accept(this, argu);
         String type = n.f1.accept(this, argu);
         String funct = n.f2.accept(this, argu);
-        argu.put(funct,type);
+
         //System.out.println(type+funct+ argu);
         Map<String,String> vars = new HashMap();
         n.f3.accept(this, vars);
         n.f4.accept(this, vars);
         n.f5.accept(this, vars);
         n.f6.accept(this, vars);
-        n.f7.accept(this, vars);
+        String varDecl = n.f7.accept(this, vars);
         n.f8.accept(this, vars);
         n.f9.accept(this, vars);
         n.f10.accept(this, vars);
         n.f11.accept(this, vars);
         n.f12.accept(this, vars);
+        argu.put(funct,vars);
         return "OK";
      }
 
@@ -149,6 +148,7 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
      String Ident = n.f1.accept(this, argu);
      n.f2.accept(this, argu);
      argu.put(Ident,Type);
+    // argu.put(Ident,Type);
      //System.out.println(Type + " " + Ident);
 
      // ArrayList<String> list;
@@ -167,7 +167,7 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
 
      // System.out.println("list2 " + list);
      // System.out.println("list");
-     return Ident;
+     return Type + " " + Ident;
   }
 
 
