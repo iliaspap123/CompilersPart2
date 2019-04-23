@@ -21,16 +21,19 @@ class Main {
       Goal root = parser.Goal();
       System.out.println(root.accept(eval, null));
       System.out.println(" Var Elements");
-      System.out.println("\t" + eval.Table);
+      //System.out.println("\t" + eval.Table);
       System.out.println(" Class Elements");
       // System.out.println("\t" + eval.ClassTypes);
-      for(String keys : eval.ClassTypes.keySet()) {
-        System.out.println("\t" + keys);
-        //System.out.println("\t" + eval.ClassTypes.get(keys));
-        ClassForm M = eval.ClassTypes.get(keys);
-        System.out.println("\t" + M.ClassVars);
-        System.out.println("\t" + M.Methods);
-      }
+      // for(String keys : eval.ClassTypes.keySet()) {
+      //   System.out.println("\t" + keys);
+      //   //System.out.println("\t" + eval.ClassTypes.get(keys));
+      //   ClassForm M = eval.ClassTypes.get(keys);
+      //   System.out.println("\t" + M.ClassVars);
+      //   System.out.println("\t" + M.Methods);
+      // }
+      //Goal root = parser.Goal();
+      check c = new check(eval.ClassTypes);
+      System.out.println(root.accept(c, eval.ClassTypes));
 
 	}
 	catch(ParseException ex){
