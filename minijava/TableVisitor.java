@@ -12,7 +12,7 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
   //public HashMap<String,Map<String,String>> ClassTypes = new HashMap();
 
   public HashMap<String,ClassForm> ClassTypes = new HashMap();
-
+  String currentClass;
      /**
       * f0 -> "class"
       * f1 -> Identifier()
@@ -23,10 +23,10 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
       */
      public String visit(ClassDeclaration n, Map argu) {
 
-        //argu = new HashMap();
-        n.f0.accept(this, argu);
+        //n.f0.accept(this, argu);
         String className = n.f1.accept(this, argu);
-        n.f2.accept(this, argu);
+        currentClass = className;
+        //n.f2.accept(this, argu);
 
         //Map<String,String> vars = new HashMap();
         ClassForm elem = new ClassForm();
@@ -49,7 +49,10 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
         //Map<String,String> methods = new HashMap();
         //String varDecl = n.f3.accept(this, argu);
         if(n.f4.present()) {
+          //elem.Methods  = new MethodForm();
+          //Map<String,String> vars = new HashMap();
           varDecl = n.f4.accept(this, elem.Methods);
+          //elem.Methods.Vars = (HashMap) vars;
         }
         else {
           varDecl = "hi";
@@ -115,27 +118,51 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
       */
      public String visit(MethodDeclaration n, Map argu) {
 
+        MethodForm meth = new MethodForm();
         //ClassForm method = ClassTypes.get(argu);
-        n.f0.accept(this, argu);
-        String type = n.f1.accept(this, argu);
-        String funct = n.f2.accept(this, argu);
+        //n.f0.accept(this, argu);
+        //ClassForm classF = (ClassForm) argu.get(currentClass);
+        String type = n.f1.accept(this, null);
+        String funct = n.f2.accept(this, null);
 
         //System.out.println(type+funct+ argu);
-        Map<String,String> vars = new HashMap();
-        n.f3.accept(this, vars);
-        n.f4.accept(this, vars);
-        n.f5.accept(this, vars);
-        n.f6.accept(this, vars);
-        String varDecl = n.f7.accept(this, vars);
-        n.f8.accept(this, vars);
-        n.f9.accept(this, vars);
-        n.f10.accept(this, vars);
-        n.f11.accept(this, vars);
-        n.f12.accept(this, vars);
-        argu.put(funct,vars);
+        //n.f3.accept(this, vars);
+        n.f4.accept(this, meth.Arguments);
+        //n.f5.accept(this, vars);
+        //n.f6.accept(this, vars);
+        //Map<String,String> vars = new HashMap();
+        n.f7.accept(this, meth.Vars);
+        //n.f8.accept(this, vars);
+        //n.f9.accept(this, vars);
+        //n.f10.accept(this, vars);
+        //n.f11.accept(this, vars);
+        //n.f12.accept(this, vars);
+        //argu.put(funct,vars);
+        //classF.Methods.Vars = (HashMap) vars;
+        argu.put(funct,meth);
         return "OK";
      }
 
+ /**
+  * f0 -> FormalParameter()
+  * f1 -> FormalParameterTail()
+  */
+ public String visit(FormalParameterList n, Map argu) {
+    n.f0.accept(this, argu);
+    n.f1.accept(this, argu);
+    return null;
+ }
+
+ /**
+  * f0 -> Type()
+  * f1 -> Identifier()
+  */
+ public String visit(FormalParameter n, Map argu) {
+    String type = n.f0.accept(this, argu);
+    String ident = n.f1.accept(this, argu);
+    argu.put(ident,type);
+    return type+ident;
+ }
 
 
   /**
@@ -214,53 +241,53 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
       return n.f0.toString()+n.f1.toString()+n.f2.toString();
    }
 
-
-      /**
-       * f0 -> "class"
-       * f1 -> Identifier()
-       * f2 -> "{"
-       * f3 -> "public"
-       * f4 -> "static"
-       * f5 -> "void"
-       * f6 -> "main"
-       * f7 -> "("
-       * f8 -> "String"
-       * f9 -> "["
-       * f10 -> "]"
-       * f11 -> Identifier()
-       * f12 -> ")"
-       * f13 -> "{"
-       * f14 -> ( VarDeclaration() )*
-       * f15 -> ( Statement() )*
-       * f16 -> "}"
-       * f17 -> "}"
-       */
-      public String visit(MainClass n, Map argu) {
-         n.f0.accept(this, argu);
-         String className = n.f1.accept(this, argu);
-
-         ClassForm elem = new ClassForm();
-         ClassTypes.put(className,elem);
-
-         n.f2.accept(this, argu);
-         n.f3.accept(this, argu);
-         n.f4.accept(this, argu);
-         n.f5.accept(this, argu);
-         n.f6.accept(this, argu);
-         n.f7.accept(this, argu);
-         n.f8.accept(this, argu);
-         n.f9.accept(this, argu);
-         n.f10.accept(this, argu);
-         n.f11.accept(this, argu);
-         n.f12.accept(this, argu);
-         n.f13.accept(this, argu);
-         HashMap<String,String> vars = new HashMap();
-         n.f14.accept(this, vars);
-         elem.Methods.put("main",vars);
-         n.f15.accept(this, argu);
-         n.f16.accept(this, argu);
-         n.f17.accept(this, argu);
-         //System.out.println(className+" "+name+" "+arg);
-         return className;
-      }
+      //
+      // /**
+      //  * f0 -> "class"
+      //  * f1 -> Identifier()
+      //  * f2 -> "{"
+      //  * f3 -> "public"
+      //  * f4 -> "static"
+      //  * f5 -> "void"
+      //  * f6 -> "main"
+      //  * f7 -> "("
+      //  * f8 -> "String"
+      //  * f9 -> "["
+      //  * f10 -> "]"
+      //  * f11 -> Identifier()
+      //  * f12 -> ")"
+      //  * f13 -> "{"
+      //  * f14 -> ( VarDeclaration() )*
+      //  * f15 -> ( Statement() )*
+      //  * f16 -> "}"
+      //  * f17 -> "}"
+      //  */
+      // public String visit(MainClass n, Map argu) {
+      //    n.f0.accept(this, argu);
+      //    String className = n.f1.accept(this, argu);
+      //
+      //    ClassForm elem = new ClassForm();
+      //    ClassTypes.put(className,elem);
+      //
+      //    n.f2.accept(this, argu);
+      //    n.f3.accept(this, argu);
+      //    n.f4.accept(this, argu);
+      //    n.f5.accept(this, argu);
+      //    n.f6.accept(this, argu);
+      //    n.f7.accept(this, argu);
+      //    n.f8.accept(this, argu);
+      //    n.f9.accept(this, argu);
+      //    n.f10.accept(this, argu);
+      //    n.f11.accept(this, argu);
+      //    n.f12.accept(this, argu);
+      //    n.f13.accept(this, argu);
+      //    HashMap<String,String> vars = new HashMap();
+      //    n.f14.accept(this, vars);
+      //    elem.Methods.put("main",vars);
+      //    n.f15.accept(this, argu);
+      //    n.f16.accept(this, argu);
+      //    n.f17.accept(this, argu);
+      //    //System.out.println(className+" "+name+" "+arg);
+      //    return className;
+      // }
 }

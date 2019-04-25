@@ -24,15 +24,22 @@ class Main {
       //System.out.println("\t" + eval.Table);
       System.out.println(" Class Elements");
       // System.out.println("\t" + eval.ClassTypes);
-      // for(String keys : eval.ClassTypes.keySet()) {
-      //   System.out.println("\t" + keys);
-      //   //System.out.println("\t" + eval.ClassTypes.get(keys));
-      //   ClassForm M = eval.ClassTypes.get(keys);
-      //   System.out.println("\t" + M.ClassVars);
-      //   System.out.println("\t" + M.Methods);
-      // }
+      for(String keys : eval.ClassTypes.keySet()) {
+        System.out.println("\t" + keys);
+        //System.out.println("\t" + eval.ClassTypes.get(keys));
+        ClassForm M = eval.ClassTypes.get(keys);
+        System.out.println("\t" + M.ClassVars);
+        //System.out.println("\t" + M.Methods);
+        for(String keys2 : M.Methods.keySet()) {
+          System.out.println("\t" + keys2);
+          //System.out.println("\t" + eval.ClassTypes.get(keys));
+          MethodForm meth = M.Methods.get(keys2);
+          System.out.println("\t" + meth.Arguments);
+          System.out.println("\t" + meth.Vars);
+        }
+      }
       //Goal root = parser.Goal();
-      check c = new check(eval.ClassTypes);
+      check c = new check();//eval.ClassTypes
       System.out.println(root.accept(c, eval.ClassTypes));
 
 	}
