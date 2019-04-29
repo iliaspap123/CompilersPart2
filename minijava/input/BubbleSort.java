@@ -91,3 +91,26 @@ class BBS{
     }
 
 }
+
+
+class A{
+      int i;
+      boolean flag;
+      int j;
+}
+
+class B extends A{
+    A type;
+    int k;
+    public int foo() {
+      j = k;
+      if(0) {
+        System.out.println(0);
+      }
+      else {
+        System.out.println(1);
+
+      }
+      return 0;
+    }
+}
