@@ -1,0 +1,1208 @@
+null
+ Var Elements
+ Class Elements
+	TV
+	{}
+	Start
+	{}
+	{nti=int, v=MyVisitor, root=Tree, ntb=boolean}
+	Visitor
+	{r=Tree, l=Tree}
+	visit
+	{n=Tree}
+	{nti=int}
+	Tree
+	{left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+	Delete
+	{v_key=int}
+	{current_node=Tree, found=boolean, parent_node=Tree, cont=boolean, is_root=boolean, ntb=boolean, key_aux=int}
+	SetHas_Left
+	{val=boolean}
+	{}
+	RemoveLeft
+	{c_node=Tree, p_node=Tree}
+	{ntb=boolean}
+	GetKey
+	{}
+	{}
+	SetRight
+	{rn=Tree}
+	{}
+	GetLeft
+	{}
+	{}
+	GetRight
+	{}
+	{}
+	Remove
+	{c_node=Tree, p_node=Tree}
+	{auxkey1=int, auxkey2=int, ntb=boolean}
+	SetLeft
+	{ln=Tree}
+	{}
+	Insert
+	{v_key=int}
+	{current_node=Tree, new_node=Tree, cont=boolean, ntb=boolean, key_aux=int}
+	accept
+	{v=Visitor}
+	{nti=int}
+	Print
+	{}
+	{current_node=Tree, ntb=boolean}
+	Init
+	{v_key=int}
+	{}
+	GetHas_Right
+	{}
+	{}
+	GetHas_Left
+	{}
+	{}
+	RemoveRight
+	{c_node=Tree, p_node=Tree}
+	{ntb=boolean}
+	Search
+	{v_key=int}
+	{current_node=Tree, ifound=int, cont=boolean, key_aux=int}
+	SetKey
+	{v_key=int}
+	{}
+	Compare
+	{num1=int, num2=int}
+	{nti=int, ntb=boolean}
+	SetHas_Right
+	{val=boolean}
+	{}
+	RecPrint
+	{node=Tree}
+	{ntb=boolean}
+	MyVisitor
+	{}
+Identifier
+Identifier
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+AllocationExpression
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+AllocationExpression
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+MessageSend {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Expression {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+PrimaryExpression1: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, ntb=boolean, v=MyVisitor, root=Tree}
+Identifier
+Identifier
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, rn=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, rn=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, rn=Tree, has_left=boolean, key=int}
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, rn=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, rn=Tree, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, rn=Tree, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {ln=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {ln=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {ln=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Expression {ln=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {ln=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {ln=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, v_key=int, has_left=boolean, key=int}
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Expression {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Expression {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Expression {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {val=boolean, left=Tree, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+TrueLiteral
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+TrueLiteral
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+BracketExpression
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+TrueLiteral
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+TrueLiteral
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Expression {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+PrimaryExpression1: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+PrimaryExpression2: {nti=int, left=Tree, num1=int, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int, num2=int}
+Identifier
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+AllocationExpression
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, new_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, ntb=boolean, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+BracketExpression
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+BracketExpression
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+MessageSend {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Expression {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, has_right=boolean, my_null=Tree, right=Tree, is_root=boolean, has_left=boolean, key_aux=int, found=boolean, left=Tree, parent_node=Tree, cont=boolean, v_key=int, ntb=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+BracketExpression
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {c_node=Tree, left=Tree, auxkey1=int, auxkey2=int, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+BracketExpression
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+BracketExpression
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {c_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, p_node=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+INTEGER_LITERAL
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+MessageSend {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+INTEGER_LITERAL
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Expression {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, ifound=int, has_right=boolean, my_null=Tree, right=Tree, cont=boolean, v_key=int, has_left=boolean, key_aux=int, key=int}
+Identifier
+Identifier
+Expression {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {current_node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+MessageSend {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Identifier
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Expression {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+PrimaryExpression1: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+TrueLiteral
+PrimaryExpression2: {node=Tree, left=Tree, has_right=boolean, my_null=Tree, right=Tree, ntb=boolean, has_left=boolean, key=int}
+Identifier
+Expression {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Expression {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+MessageSend {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+PrimaryExpression2: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Expression {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+ThisExpression
+PrimaryExpression2: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Expression {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+PrimaryExpression1: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, left=Tree, v=Visitor, has_right=boolean, my_null=Tree, right=Tree, has_left=boolean, key=int}
+Identifier
+Identifier
+Identifier
+peta error
+Expression {nti=int, r=Tree, l=Tree, n=Tree}
+PrimaryExpression1: {nti=int, r=Tree, l=Tree, n=Tree}
+INTEGER_LITERAL
+PrimaryExpression2: {nti=int, r=Tree, l=Tree, n=Tree}

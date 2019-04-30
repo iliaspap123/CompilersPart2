@@ -24,7 +24,7 @@ public class check extends GJDepthFirst<String, Map> {
 
      String className = n.f1.accept(this, argu);
      currentClass = className;
-     System.out.println("cur is "+currentClass);
+     //System.out.println("cur is "+currentClass);
 
 
      ClassForm classF = (ClassForm) argu.get(className);
@@ -50,7 +50,7 @@ public class check extends GJDepthFirst<String, Map> {
 
      String className = n.f1.accept(this, argu);
      currentClass = className;
-     System.out.println("cur is "+currentClass);
+     //System.out.println("cur is "+currentClass);
      ClassForm classF = (ClassForm) argu.get(className);
      classCur = classF;
 
@@ -155,8 +155,12 @@ public class check extends GJDepthFirst<String, Map> {
       */
      public String visit(IfStatement n, Map argu) {
         String type = n.f2.accept(this, argu);
-        if(type != "int" && type != "boolean") {
-          System.out.println("if error");
+        if(type.startsWith("class")) {
+          String[] parts = type.split(" ");
+          type = parts[1];
+        }
+        if(!type.startsWith("int") && !type.startsWith("boolean")) {
+          System.out.println("if error "+ type);
         }
         n.f4.accept(this, argu);
         n.f6.accept(this, argu);
@@ -172,7 +176,11 @@ public class check extends GJDepthFirst<String, Map> {
       */
      public String visit(WhileStatement n, Map argu) {
         String type = n.f2.accept(this, argu);
-        if(type != "int" && type != "boolean") {
+        if(type.startsWith("class")) {
+          String[] parts = type.split(" ");
+          type = parts[1];
+        }
+        if(!type.startsWith("int") && !type.startsWith("boolean")) {
           System.out.println("error while");
         }
         n.f3.accept(this, argu);
@@ -208,11 +216,14 @@ public class check extends GJDepthFirst<String, Map> {
         }
       }
       String expr = n.f2.accept(this, argu);
-
+      if(expr.startsWith("class") ) {
+        String[] parts = expr.split(" ");
+        expr = parts[1];
+      }
       //System.out.println(type+" proerror "+expr);
 
-      if( !type.equals(expr) ) {
-        System.out.println(argu.get(ident)+" error "+expr);
+      if( !type.equals(expr)) {
+        System.out.println("AssignmentStatement: " +argu.get(ident)+" error "+expr);
 
       }
       else {
@@ -234,8 +245,34 @@ public class check extends GJDepthFirst<String, Map> {
    *       | Clause()
    */
   public String visit(Expression n, Map argu) {
+    //System.out.println("Expression " + argu);
      return n.f0.accept(this, argu);
   }
+
+  /**
+   * f0 -> PrimaryExpression()
+   * f1 -> "."
+   * f2 -> "length"
+   */
+  public String visit(ArrayLength n, Map argu) {
+     n.f0.accept(this, argu);
+     n.f1.accept(this, argu);
+     n.f2.accept(this, argu);
+     return "int";
+  }
+
+  /**
+   * f0 -> PrimaryExpression()
+   * f1 -> "*"
+   * f2 -> PrimaryExpression()
+   */
+  public String visit(TimesExpression n, Map argu) {
+     String type = n.f0.accept(this, argu);
+     //n.f1.accept(this, argu);
+     n.f2.accept(this, argu);
+     return type;
+  }
+
 
   /**
    * f0 -> Clause()
@@ -300,10 +337,31 @@ public class check extends GJDepthFirst<String, Map> {
    *       | BracketExpression()
    */
   public String visit(PrimaryExpression n, Map argu) {
+    //System.out.println("PrimaryExpression1: "+argu);
+
      String type = n.f0.accept(this, argu);
-     if(type != "int" && type != "int[]" && type != "boolean") {
-       type = (String) argu.get(type);
+     //System.out.println("PrimaryExpression: "+type);
+     //System.out.println("PrimaryExpression2: "+argu);
+
+     if(type!=null && type != "int" && type != "int[]" && type != "boolean" && !type.startsWith("this") && !type.startsWith("class")) {
+       //type = (String) argu.get(type);
+       //System.out.println(argu + " --- " + type);
+
+       String type2;
+       if((type2 = (String) argu.get(type)) == null) {
+         //System.out.println(type+" peta error "+argu);
+
+         if((type2 = check_var(type,currentClass)) == null) {
+           System.out.println(type+" peta error "+type2);
+         }
+       }
+       type = type2;
+       //System.out.println("argu is "+argu);
        //System.out.println("tyoe is "+type);
+     }
+     if(type.startsWith("this") || type.startsWith("class")) {
+       String[] parts = type.split(" ");
+       type = parts[1];
      }
      return type;
   }
@@ -317,16 +375,68 @@ public class check extends GJDepthFirst<String, Map> {
    * f5 -> ")"
    */
   public String visit(MessageSend n, Map argu) {
+     //System.out.println("MessageSend " + argu);
      String className = n.f0.accept(this, argu);
      if(className==null || className.equals("this")) {
        className = currentClass;
-       System.out.println("ok "+ currentClass);
+       //System.out.println("ok "+ currentClass);
      }
-     System.out.println(className);
+     else if(!ClassTypes.containsKey(className)){
+       String type1;
+       if((type1 = (String) argu.get(className)) == null) {
+         if((type1 = check_var(className,currentClass)) == null) {
+           System.out.println("peta error MessageSend");
+         }
+       }
+       className = type1;
+     }
+     //System.out.println(className);
      String methName = n.f2.accept(this, argu);
      n.f4.accept(this, argu);
-     System.out.println("check meth is " + check_method_Call(methName,currentClass));
-     return "send";
+     String type = check_method_Call(methName,className);
+     //System.out.println("check meth is " + type);
+     return "class " + type;
+  }
+
+  /**
+   * f0 -> Expression()
+   * f1 -> ExpressionTail()
+   */
+  public String visit(ExpressionList n, Map argu) {
+     String type = n.f0.accept(this, argu);
+     n.f1.accept(this, argu);
+     return type;
+  }
+
+  /**
+   * f0 -> ( ExpressionTerm() )*
+   */
+  public String visit(ExpressionTail n, Map argu) {
+     return n.f0.accept(this, argu);
+  }
+
+  /**
+   * f0 -> ","
+   * f1 -> Expression()
+   */
+  public String visit(ExpressionTerm n, Map argu) {
+     return n.f1.accept(this, argu);
+  }
+
+  /**
+   * f0 -> "new"
+   * f1 -> Identifier()
+   * f2 -> "("
+   * f3 -> ")"
+   */
+  public String visit(AllocationExpression n, Map argu) {
+     //System.out.println("AllocationExpression");
+     String objectName = n.f1.accept(this, argu);
+     //System.out.println(objectName);
+     if(!ClassTypes.containsKey(objectName)) {
+       System.out.println("object does not exit" + objectName);
+     }
+     return "class "+objectName;
   }
 
 
@@ -340,14 +450,19 @@ public class check extends GJDepthFirst<String, Map> {
 
 
   /**
-   * f0 -> "!"
-   * f1 -> Clause()
-   */
+  * f0 -> "!"
+  * f1 -> Clause()
+  */
   public String visit(NotExpression n, Map argu) {
-     if(n.f1.accept(this, argu) != "boolean") {
-       System.out.println("error !");
-     }
-     return "boolean";
+    String type = n.f1.accept(this, argu);
+    if(type.startsWith("class")) {
+      String[] parts = type.split(" ");
+      type = parts[1];
+    }
+    if(!type.startsWith("int") && !type.startsWith("boolean")) {
+      System.out.println("error !");
+    }
+    return "boolean";
   }
 
   /**
@@ -356,6 +471,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f2 -> ")"
    */
   public String visit(BracketExpression n, Map argu) {
+     //System.out.println("BracketExpression");
      return n.f1.accept(this, argu);
   }
 
@@ -368,8 +484,9 @@ public class check extends GJDepthFirst<String, Map> {
     * f4 -> "]"
     */
    public String visit(ArrayAllocationExpression n, Map argu) {
+      //System.out.println("ArrayAllocationExpression");
       if(n.f3.accept(this, argu) != "int" ) {
-          System.out.println("in array "+n.f3.accept(this, argu));
+          System.out.println("error in array "+n.f3.accept(this, argu));
       }
       return "int[]";
    }
@@ -401,6 +518,7 @@ public class check extends GJDepthFirst<String, Map> {
     * f0 -> <INTEGER_LITERAL>
     */
    public String visit(IntegerLiteral n, Map argu) {
+      //System.out.println("INTEGER_LITERAL");
       return "int";
    }
 
@@ -408,13 +526,17 @@ public class check extends GJDepthFirst<String, Map> {
     * f0 -> "true"
     */
    public String visit(TrueLiteral n, Map argu) {
+     //System.out.println("TrueLiteral");
+
       return "boolean";
    }
 
    /**
     * f0 -> "false"
     */
-   public String visit(FalseLiteral n, ClassForm argu) {
+   public String visit(FalseLiteral n, Map argu) {
+     //System.out.println("TrueLiteral");
+
       return "boolean";
    }
 
@@ -422,26 +544,40 @@ public class check extends GJDepthFirst<String, Map> {
    * f0 -> <IDENTIFIER>
    */
    public String visit(Identifier n, Map argu) {
+     //System.out.println("Identifier");
      //System.out.println(n.f0.toString());
      return n.f0.toString();
    }
 
+   /**
+    * f0 -> "this"
+    */
+   public String visit(ThisExpression n, Map argu) {
+       //System.out.println("ThisExpression");
+       return "this " + currentClass;
+      //return n.f0.toString();
+   }
+
 
   String check_var(String var,String className) {
-    System.out.println("funct: I will check in super_classes of "+ className);
+    //System.out.println("var " +var +" --- className "+ className);
+    if(className == "main") {
+      return null;
+    }
+    //System.out.println("funct: I will check in super_classes of "+ className);
     ClassForm classF = ClassTypes.get(className);
     if(classF.ClassVars.get(var) != null) {
-      System.out.println("found it " + var);
+      //System.out.println("found it " + var);
       return classF.ClassVars.get(var);
     }
 
     String superClass = classF.Isimpliments;
     while(superClass != null) {
-      System.out.println("check in superClass: "+superClass );
+      //System.out.println("check in superClass: "+superClass );
       classF = ClassTypes.get(superClass);
 
       if(classF.ClassVars.get(var) != null) {
-        System.out.println("found it " + var);
+        //System.out.println("found it " + var);
         return classF.ClassVars.get(var);
       }
 
@@ -485,24 +621,24 @@ public class check extends GJDepthFirst<String, Map> {
    */
   public String visit(MainClass n, Map argu) {
      currentClass = "main";
-     n.f0.accept(this, argu);
-     n.f1.accept(this, argu);
-     n.f2.accept(this, argu);
-     n.f3.accept(this, argu);
-     n.f4.accept(this, argu);
-     n.f5.accept(this, argu);
-     n.f6.accept(this, argu);
-     n.f7.accept(this, argu);
-     n.f8.accept(this, argu);
-     n.f9.accept(this, argu);
-     n.f10.accept(this, argu);
-     n.f11.accept(this, argu);
-     n.f12.accept(this, argu);
-     n.f13.accept(this, argu);
-     n.f14.accept(this, argu);
-     n.f15.accept(this, argu);
-     n.f16.accept(this, argu);
-     n.f17.accept(this, argu);
+     // n.f0.accept(this, argu);
+     // n.f1.accept(this, argu);
+     // n.f2.accept(this, argu);
+     // n.f3.accept(this, argu);
+     // n.f4.accept(this, argu);
+     // n.f5.accept(this, argu);
+     // n.f6.accept(this, argu);
+     // n.f7.accept(this, argu);
+     // n.f8.accept(this, argu);
+     // n.f9.accept(this, argu);
+     // n.f10.accept(this, argu);
+     // n.f11.accept(this, argu);
+     // n.f12.accept(this, argu);
+     // n.f13.accept(this, argu);
+     // n.f14.accept(this, argu);
+     // n.f15.accept(this, argu);
+     // n.f16.accept(this, argu);
+     // n.f17.accept(this, argu);
 
      return "main";
   }
@@ -516,19 +652,19 @@ public class check extends GJDepthFirst<String, Map> {
     }
     ClassForm classF = ClassTypes.get(className);
     if(classF.Methods.get(meth) != null) {
-      System.out.println("found meth it " + meth);
+      //System.out.println("found meth it " + meth);
       MethodForm M = classF.Methods.get(meth);
       return M.Type;
     }
 
-    System.out.println("funct: I will check in super_classes of "+ className);
+    //System.out.println("funct: I will check in super_classes of "+ className);
     String superClass = classF.Isimpliments;
     while(superClass != null) {
-      System.out.println("check in superClass: "+superClass );
+      //System.out.println("check in superClass: "+superClass );
       classF = ClassTypes.get(superClass);
 
       if(classF.Methods.get(meth) != null) {
-        System.out.println("found it " + meth);
+        //System.out.println("found it " + meth);
         MethodForm M = classF.Methods.get(meth);
         return M.Type;
       }

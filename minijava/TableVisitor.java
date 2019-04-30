@@ -72,7 +72,7 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
         if(n.f5.present()) {
           n.f5.accept(this, elem.ClassVars);
         }
-        if(n.f5.present()) {
+        if(n.f6.present()) {
           n.f6.accept(this, elem.Methods);
         }
         //n.f7.accept(this, argu);
