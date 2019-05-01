@@ -236,19 +236,19 @@ public class check extends GJDepthFirst<String, Map> {
 
 
   /**
-   * f0 -> AndExpression()
-   *       | CompareExpression()
-   *       | PlusExpression()
-   *       | MinusExpression()
-   *       | TimesExpression()
-   *       | ArrayLookup()
-   *       | ArrayLength()
-   *       | MessageSend()
-   *       | Clause()
-   */
+  * f0 -> AndExpression()
+  *       | CompareExpression()
+  *       | PlusExpression()
+  *       | MinusExpression()
+  *       | TimesExpression()
+  *       | ArrayLookup()
+  *       | ArrayLength()
+  *       | MessageSend()
+  *       | Clause()
+  */
   public String visit(Expression n, Map argu) {
-    //System.out.println("Expression " + argu);
-     return n.f0.accept(this, argu);
+  //System.out.println("Expression " + argu);
+   return n.f0.accept(this, argu);
   }
 
   /**
@@ -414,6 +414,10 @@ public class check extends GJDepthFirst<String, Map> {
   public String visit(ExpressionList n, Map argu) {
      String type = n.f0.accept(this, argu);
      // System.out.println("type: "+type);
+     if(type.startsWith("class ") || type.startsWith("this ")) {
+       String[] parts = type.split(" ");
+       type = parts[1];
+     }
      temp_args.add(type);
      n.f1.accept(this, argu);
      return type;
@@ -432,6 +436,10 @@ public class check extends GJDepthFirst<String, Map> {
    */
   public String visit(ExpressionTerm n, Map argu) {
      String type = n.f1.accept(this, argu);
+     if(type.startsWith("class ") || type.startsWith("this ")) {
+       String[] parts = type.split(" ");
+       type = parts[1];
+     }
      temp_args.add(type);
      return "ok" ;
   }
@@ -656,6 +664,22 @@ public class check extends GJDepthFirst<String, Map> {
      return "main";
   }
 
+  Boolean checkIfSuperclass(String classA,String classB) {
+    //System.out.println(classA +" "+ classB);
+    if(!ClassTypes.containsKey(classB)) {
+      return false;
+    }
+    ClassForm classF = ClassTypes.get(classB);
+    String superClass = classF.Isimpliments;
+    while(superClass != null) {
+      if(superClass.equals(classA)) {
+        return true;
+      }
+      classF = ClassTypes.get(superClass);
+      superClass = classF.Isimpliments;
+    }
+    return false;
+  }
 
   String check_method_Call(String meth,String className,ArrayList args) {
     //System.out.println(ClassTypes);
@@ -676,7 +700,8 @@ public class check extends GJDepthFirst<String, Map> {
       int i = 0;
       for(String keys : M.Arguments.keySet()) {
         String type = M.Arguments.get(keys);
-        if(!type.equals(args.get(i))) {
+        String arg = (String) args.get(i);
+        if(!type.equals(arg) &&  !checkIfSuperclass(type,arg)) {
           System.out.println(type + " not equal "+ args.get(i));
         }
         i++;
@@ -694,13 +719,14 @@ public class check extends GJDepthFirst<String, Map> {
         //System.out.println("found it " + meth);
         MethodForm M = classF.Methods.get(meth);
         System.out.println(M.Arguments.values​() + "  " + args);
-        if(M.Arguments.size() != args.size()) {
           System.out.println("method has different num of args");
+          if(M.Arguments.size() != args.size() ) {
         }
         int i = 0;
         for(String keys : M.Arguments.keySet()) {
           String type = M.Arguments.get(keys);
-          if(!type.equals(args.get(i))) {
+          String arg = (String) args.get(i);
+          if(!type.equals(arg) &&  !checkIfSuperclass(type,arg)) {
             System.out.println(type+" not equal "+args.get(i));
           }
           i++;
