@@ -1,5 +1,6 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class ClassForm {
   String Isimpliments;
@@ -9,6 +10,6 @@ public class ClassForm {
 
 class MethodForm {
   String Type;
-  HashMap<String,String> Arguments = new HashMap();
+  LinkedHashMap<String,String> Arguments = new LinkedHashMap();
   HashMap<String,String> Vars = new HashMap();
 }

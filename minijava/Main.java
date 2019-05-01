@@ -34,6 +34,9 @@ class Main {
           System.out.println("\t" + keys2);
           //System.out.println("\t" + eval.ClassTypes.get(keys));
           MethodForm meth = M.Methods.get(keys2);
+          for(String keys3 : meth.Arguments.keySet()) {
+            System.out.println("\t" + keys3);
+          }
           System.out.println("\t" + meth.Arguments);
           System.out.println("\t" + meth.Vars);
         }

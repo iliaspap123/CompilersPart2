@@ -2,14 +2,16 @@ import syntaxtree.*;
 import visitor.GJDepthFirst;
 import java.util.HashMap;
 import java.util.Map;
-
-
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class check extends GJDepthFirst<String, Map> {
 
   public HashMap<String,ClassForm> ClassTypes;
   ClassForm classCur;
   String currentClass;
+  ArrayList<String> temp_args;
+
   /**
    * f0 -> "class"
    * f1 -> Identifier()Map
@@ -392,8 +394,15 @@ public class check extends GJDepthFirst<String, Map> {
      }
      //System.out.println(className);
      String methName = n.f2.accept(this, argu);
+     temp_args = new ArrayList<String>();
      n.f4.accept(this, argu);
-     String type = check_method_Call(methName,className);
+     // for (String i : temp_args) {
+     //  System.out.print(i);
+     // }
+     // System.out.println(" ]");
+     //System.out.println("temp " + temp_args);
+     String type = check_method_Call(methName,className,temp_args);
+     temp_args.clear();
      //System.out.println("check meth is " + type);
      return "class " + type;
   }
@@ -404,6 +413,8 @@ public class check extends GJDepthFirst<String, Map> {
    */
   public String visit(ExpressionList n, Map argu) {
      String type = n.f0.accept(this, argu);
+     // System.out.println("type: "+type);
+     temp_args.add(type);
      n.f1.accept(this, argu);
      return type;
   }
@@ -420,7 +431,9 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> Expression()
    */
   public String visit(ExpressionTerm n, Map argu) {
-     return n.f1.accept(this, argu);
+     String type = n.f1.accept(this, argu);
+     temp_args.add(type);
+     return "ok" ;
   }
 
   /**
@@ -644,7 +657,7 @@ public class check extends GJDepthFirst<String, Map> {
   }
 
 
-  String check_method_Call(String meth,String className) {
+  String check_method_Call(String meth,String className,ArrayList args) {
     //System.out.println(ClassTypes);
     //System.out.println(className);
     if(className == "main") {
@@ -654,6 +667,20 @@ public class check extends GJDepthFirst<String, Map> {
     if(classF.Methods.get(meth) != null) {
       //System.out.println("found meth it " + meth);
       MethodForm M = classF.Methods.get(meth);
+      //System.out.println(M.Arguments.values​() + "  " + args);
+
+      if(M.Arguments.size() != args.size()) {
+        System.out.println("method has different num of args");
+      }
+
+      int i = 0;
+      for(String keys : M.Arguments.keySet()) {
+        String type = M.Arguments.get(keys);
+        if(!type.equals(args.get(i))) {
+          System.out.println(type + " not equal "+ args.get(i));
+        }
+        i++;
+      }
       return M.Type;
     }
 
@@ -666,6 +693,18 @@ public class check extends GJDepthFirst<String, Map> {
       if(classF.Methods.get(meth) != null) {
         //System.out.println("found it " + meth);
         MethodForm M = classF.Methods.get(meth);
+        System.out.println(M.Arguments.values​() + "  " + args);
+        if(M.Arguments.size() != args.size()) {
+          System.out.println("method has different num of args");
+        }
+        int i = 0;
+        for(String keys : M.Arguments.keySet()) {
+          String type = M.Arguments.get(keys);
+          if(!type.equals(args.get(i))) {
+            System.out.println(type+" not equal "+args.get(i));
+          }
+          i++;
+        }
         return M.Type;
       }
 

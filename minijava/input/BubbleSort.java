@@ -102,9 +102,10 @@ class A{
 class B extends A{
     A type;
     int k;
-    public int foo() {
+    public int foo(int i,A yolo,int oti) {
       j = k;
       if(0) {
+        k = this.foo(k,k,k);
         System.out.println(0);
       }
       else {
