@@ -20,7 +20,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f4 -> ( MethodDeclaration() )*
    * f5 -> "}"
    */
-  public String visit(ClassDeclaration n, Map argu) {
+  public String visit(ClassDeclaration n, Map argu) throws Exception {
 
      ClassTypes = (HashMap) argu;
 
@@ -46,7 +46,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f6 -> ( MethodDeclaration() )*
    * f7 -> "}"
    */
-  public String visit(ClassExtendsDeclaration n, Map argu) {
+  public String visit(ClassExtendsDeclaration n, Map argu) throws Exception {
 
      ClassTypes = (HashMap) argu;
 
@@ -80,16 +80,24 @@ public class check extends GJDepthFirst<String, Map> {
     * f11 -> ";"
     * f12 -> "}"
     */
-   public String visit(MethodDeclaration n, Map argu) {
+   public String visit(MethodDeclaration n, Map argu) throws Exception {
 
       String funct = n.f2.accept(this, null);
       MethodForm meth = (MethodForm) argu.get(funct);
       HashMap all_vars = new HashMap();
       if(meth != null ) {
+        for(String key : meth.Arguments.keySet()) {
+          if(meth.Vars.containsKey(key)) {
+            String Message = "variable "+key+ " is already defined in method";
+            throw new MyException(currentClass,funct,Message);
+          }
+        }
         all_vars.putAll(meth.Arguments);
         all_vars.putAll(meth.Vars);
       }
       all_vars.putAll(classCur.ClassVars);
+
+      check_overload(currentClass,funct);
 
       n.f8.accept(this, all_vars);
       n.f10.accept(this, all_vars);
@@ -106,7 +114,7 @@ public class check extends GJDepthFirst<String, Map> {
      *       | WhileStatement()
      *       | PrintStatement()
      */
-    public String visit(Statement n, Map argu) {
+    public String visit(Statement n, Map argu) throws Exception {
        return n.f0.accept(this, argu);
     }
 
@@ -116,7 +124,7 @@ public class check extends GJDepthFirst<String, Map> {
      * f1 -> ( Statement() )*
      * f2 -> "}"
      */
-    public String visit(Block n, Map argu) {
+    public String visit(Block n, Map argu) throws Exception {
        return n.f1.accept(this, argu);
     }
 
@@ -129,18 +137,25 @@ public class check extends GJDepthFirst<String, Map> {
      * f5 -> Expression()
      * f6 -> ";"
      */
-    public String visit(ArrayAssignmentStatement n, Map argu) {
+    public String visit(ArrayAssignmentStatement n, Map argu) throws Exception {
        String ident = n.f0.accept(this, argu);
        String type;
        if((type = (String) argu.get(ident)) == null) {
          if((type = check_var(ident,currentClass)) == null) {
            System.out.println("peta error");
+           String methName = "";
+           String Message = "peta error";
+           throw new MyException(currentClass,methName,Message);
          }
        }
        String int_type2 = n.f2.accept(this, argu);
        String int_type3 = n.f5.accept(this, argu);
        if(!type.equals("int[]") || !int_type2.equals("int") || !int_type3.equals("int")) {
          System.out.println("error2 ArrayAssignmentStatement"+type+int_type2+int_type3);
+         String methName = "";
+         String Message = "error2 ArrayAssignmentStatement"+type+int_type2+int_type3;
+         throw new MyException(currentClass,methName,Message);
+
        }
        return "ok";
     }
@@ -155,7 +170,7 @@ public class check extends GJDepthFirst<String, Map> {
       * f5 -> "else"
       * f6 -> Statement()
       */
-     public String visit(IfStatement n, Map argu) {
+     public String visit(IfStatement n, Map argu) throws Exception {
         String type = n.f2.accept(this, argu);
         if(type.startsWith("class")) {
           String[] parts = type.split(" ");
@@ -163,6 +178,9 @@ public class check extends GJDepthFirst<String, Map> {
         }
         if(!type.startsWith("int") && !type.startsWith("boolean")) {
           System.out.println("if error "+ type);
+          String methName = "";
+          String Message = "error";
+          throw new MyException(currentClass,methName,Message);
         }
         n.f4.accept(this, argu);
         n.f6.accept(this, argu);
@@ -176,7 +194,7 @@ public class check extends GJDepthFirst<String, Map> {
       * f3 -> ")"
       * f4 -> Statement()
       */
-     public String visit(WhileStatement n, Map argu) {
+     public String visit(WhileStatement n, Map argu) throws Exception {
         String type = n.f2.accept(this, argu);
         if(type.startsWith("class")) {
           String[] parts = type.split(" ");
@@ -184,6 +202,9 @@ public class check extends GJDepthFirst<String, Map> {
         }
         if(!type.startsWith("int") && !type.startsWith("boolean")) {
           System.out.println("error while");
+          String methName = "";
+          String Message = "error";
+          throw new MyException(currentClass,methName,Message);
         }
         n.f3.accept(this, argu);
         n.f4.accept(this, argu);
@@ -197,7 +218,7 @@ public class check extends GJDepthFirst<String, Map> {
       * f3 -> ")"
       * f4 -> ";"
       */
-     public String visit(PrintStatement n, Map argu) {
+     public String visit(PrintStatement n, Map argu) throws Exception {
         n.f2.accept(this, argu);
         return "print";
      }
@@ -208,13 +229,16 @@ public class check extends GJDepthFirst<String, Map> {
     * f2 -> Expression()
     * f3 -> ";"
     */
-   public String visit(AssignmentStatement n, Map argu) {
+   public String visit(AssignmentStatement n, Map argu) throws Exception {
 
       String ident = n.f0.accept(this, argu);
       String type;
       if((type = (String) argu.get(ident)) == null) {
         if((type = check_var(ident,currentClass)) == null) {
           System.out.println("peta error");
+          String methName = "";
+          String Message = "error";
+          throw new MyException(currentClass,methName,Message);
         }
       }
       String expr = n.f2.accept(this, argu);
@@ -226,6 +250,9 @@ public class check extends GJDepthFirst<String, Map> {
 
       if( !type.equals(expr)) {
         System.out.println("AssignmentStatement: " +argu.get(ident)+" error "+expr);
+        String methName = "";
+        String Message = "error";
+        throw new MyException(currentClass,methName,Message);
 
       }
       else {
@@ -246,7 +273,7 @@ public class check extends GJDepthFirst<String, Map> {
   *       | MessageSend()
   *       | Clause()
   */
-  public String visit(Expression n, Map argu) {
+  public String visit(Expression n, Map argu) throws Exception {
   //System.out.println("Expression " + argu);
    return n.f0.accept(this, argu);
   }
@@ -256,7 +283,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> "."
    * f2 -> "length"
    */
-  public String visit(ArrayLength n, Map argu) {
+  public String visit(ArrayLength n, Map argu) throws Exception {
      n.f0.accept(this, argu);
      n.f1.accept(this, argu);
      n.f2.accept(this, argu);
@@ -268,7 +295,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> "*"
    * f2 -> PrimaryExpression()
    */
-  public String visit(TimesExpression n, Map argu) {
+  public String visit(TimesExpression n, Map argu) throws Exception {
      String type = n.f0.accept(this, argu);
      //n.f1.accept(this, argu);
      n.f2.accept(this, argu);
@@ -281,9 +308,12 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> "&&"
    * f2 -> Clause()
    */
-  public String visit(AndExpression n, Map argu) {
+  public String visit(AndExpression n, Map argu) throws Exception {
      if(n.f0.accept(this, argu) != "boolean" || n.f2.accept(this, argu) != "boolean") {
        System.out.println("error &&");
+       String methName = "";
+       String Message = "error";
+       throw new MyException(currentClass,methName,Message);
      }
      return "boolean";
   }
@@ -293,10 +323,13 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> "<"
    * f2 -> PrimaryExpression()
    */
-  public String visit(CompareExpression n, Map argu) {
+  public String visit(CompareExpression n, Map argu) throws Exception {
      //String type;
      if(n.f0.accept(this, argu) != "int" ||  n.f2.accept(this, argu) != "int") {
        System.out.println("error <");
+       String methName = "";
+       String Message = "error";
+       throw new MyException(currentClass,methName,Message);
      }
      return "boolean";
   }
@@ -307,9 +340,12 @@ public class check extends GJDepthFirst<String, Map> {
   * f1 -> "+"
   * f2 -> PrimaryExpression()
   */
- public String visit(PlusExpression n, Map argu) {
+ public String visit(PlusExpression n, Map argu) throws Exception {
     if(n.f0.accept(this, argu) != "int" ||  n.f2.accept(this, argu) != "int") {
      System.out.println("error +");
+     String methName = "";
+     String Message = "error";
+     throw new MyException(currentClass,methName,Message);
     }
     return "int";
  }
@@ -320,9 +356,12 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> "-"
    * f2 -> PrimaryExpression()
    */
-  public String visit(MinusExpression n, Map argu) {
+  public String visit(MinusExpression n, Map argu) throws Exception {
     if(n.f0.accept(this, argu) != "int" ||  n.f2.accept(this, argu) != "int") {
      System.out.println("error -");
+     String methName = "";
+     String Message = "error";
+     throw new MyException(currentClass,methName,Message);
     }
     return "int";
   }
@@ -338,7 +377,7 @@ public class check extends GJDepthFirst<String, Map> {
    *       | AllocationExpression()
    *       | BracketExpression()
    */
-  public String visit(PrimaryExpression n, Map argu) {
+  public String visit(PrimaryExpression n, Map argu) throws Exception {
     //System.out.println("PrimaryExpression1: "+argu);
 
      String type = n.f0.accept(this, argu);
@@ -355,6 +394,9 @@ public class check extends GJDepthFirst<String, Map> {
 
          if((type2 = check_var(type,currentClass)) == null) {
            System.out.println(type+" peta error "+type2);
+           String methName = "";
+           String Message = "error";
+           throw new MyException(currentClass,methName,Message);
          }
        }
        type = type2;
@@ -376,7 +418,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f4 -> ( ExpressionList() )?
    * f5 -> ")"
    */
-  public String visit(MessageSend n, Map argu) {
+  public String visit(MessageSend n, Map argu) throws Exception {
      //System.out.println("MessageSend " + argu);
      String className = n.f0.accept(this, argu);
      if(className==null || className.equals("this")) {
@@ -388,6 +430,9 @@ public class check extends GJDepthFirst<String, Map> {
        if((type1 = (String) argu.get(className)) == null) {
          if((type1 = check_var(className,currentClass)) == null) {
            System.out.println("peta error MessageSend");
+           String methName = "";
+           String Message = "error";
+           throw new MyException(currentClass,methName,Message);
          }
        }
        className = type1;
@@ -411,7 +456,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f0 -> Expression()
    * f1 -> ExpressionTail()
    */
-  public String visit(ExpressionList n, Map argu) {
+  public String visit(ExpressionList n, Map argu) throws Exception {
      String type = n.f0.accept(this, argu);
      // System.out.println("type: "+type);
      if(type.startsWith("class ") || type.startsWith("this ")) {
@@ -426,7 +471,7 @@ public class check extends GJDepthFirst<String, Map> {
   /**
    * f0 -> ( ExpressionTerm() )*
    */
-  public String visit(ExpressionTail n, Map argu) {
+  public String visit(ExpressionTail n, Map argu) throws Exception {
      return n.f0.accept(this, argu);
   }
 
@@ -434,7 +479,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f0 -> ","
    * f1 -> Expression()
    */
-  public String visit(ExpressionTerm n, Map argu) {
+  public String visit(ExpressionTerm n, Map argu) throws Exception {
      String type = n.f1.accept(this, argu);
      if(type.startsWith("class ") || type.startsWith("this ")) {
        String[] parts = type.split(" ");
@@ -450,7 +495,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f2 -> "("
    * f3 -> ")"
    */
-  public String visit(AllocationExpression n, Map argu) {
+  public String visit(AllocationExpression n, Map argu) throws Exception {
      //System.out.println("AllocationExpression");
      String objectName = n.f1.accept(this, argu);
      //System.out.println(objectName);
@@ -465,7 +510,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f0 -> NotExpression()
    *       | PrimaryExpression()
    */
-  public String visit(Clause n, Map argu) {
+  public String visit(Clause n, Map argu) throws Exception {
      return n.f0.accept(this, argu);
   }
 
@@ -474,7 +519,7 @@ public class check extends GJDepthFirst<String, Map> {
   * f0 -> "!"
   * f1 -> Clause()
   */
-  public String visit(NotExpression n, Map argu) {
+  public String visit(NotExpression n, Map argu) throws Exception {
     String type = n.f1.accept(this, argu);
     if(type.startsWith("class")) {
       String[] parts = type.split(" ");
@@ -482,6 +527,9 @@ public class check extends GJDepthFirst<String, Map> {
     }
     if(!type.startsWith("int") && !type.startsWith("boolean")) {
       System.out.println("error !");
+      String methName = "";
+      String Message = "error";
+      throw new MyException(currentClass,methName,Message);
     }
     return "boolean";
   }
@@ -491,7 +539,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> Expression()
    * f2 -> ")"
    */
-  public String visit(BracketExpression n, Map argu) {
+  public String visit(BracketExpression n, Map argu) throws Exception {
      //System.out.println("BracketExpression");
      return n.f1.accept(this, argu);
   }
@@ -504,10 +552,13 @@ public class check extends GJDepthFirst<String, Map> {
     * f3 -> Expression()
     * f4 -> "]"
     */
-   public String visit(ArrayAllocationExpression n, Map argu) {
+   public String visit(ArrayAllocationExpression n, Map argu) throws Exception {
       //System.out.println("ArrayAllocationExpression");
       if(n.f3.accept(this, argu) != "int" ) {
           System.out.println("error in array "+n.f3.accept(this, argu));
+          String methName = "";
+          String Message = "error";
+          throw new MyException(currentClass,methName,Message);
       }
       return "int[]";
    }
@@ -519,7 +570,7 @@ public class check extends GJDepthFirst<String, Map> {
     * f2 -> PrimaryExpression()
     * f3 -> "]"
     */
-   public String visit(ArrayLookup n, Map argu) {
+   public String visit(ArrayLookup n, Map argu) throws Exception {
       //n.f1.accept(this, argu);
       //n.f3.accept(this, argu);
       String type1 = n.f0.accept(this, argu);
@@ -529,7 +580,11 @@ public class check extends GJDepthFirst<String, Map> {
       if(!type1.equals("int[]") || !type2.equals("int")) {
 
        System.out.println("error ArrayLookup " );
+       String methName = "";
+       String Message = "error";
+       throw new MyException(currentClass,methName,Message);
       }
+      
       return "int";
    }
 
@@ -538,7 +593,7 @@ public class check extends GJDepthFirst<String, Map> {
    /**
     * f0 -> <INTEGER_LITERAL>
     */
-   public String visit(IntegerLiteral n, Map argu) {
+   public String visit(IntegerLiteral n, Map argu) throws Exception {
       //System.out.println("INTEGER_LITERAL");
       return "int";
    }
@@ -546,7 +601,7 @@ public class check extends GJDepthFirst<String, Map> {
    /**
     * f0 -> "true"
     */
-   public String visit(TrueLiteral n, Map argu) {
+   public String visit(TrueLiteral n, Map argu) throws Exception {
      //System.out.println("TrueLiteral");
 
       return "boolean";
@@ -555,7 +610,7 @@ public class check extends GJDepthFirst<String, Map> {
    /**
     * f0 -> "false"
     */
-   public String visit(FalseLiteral n, Map argu) {
+   public String visit(FalseLiteral n, Map argu) throws Exception {
      //System.out.println("TrueLiteral");
 
       return "boolean";
@@ -564,7 +619,7 @@ public class check extends GJDepthFirst<String, Map> {
    /**
    * f0 -> <IDENTIFIER>
    */
-   public String visit(Identifier n, Map argu) {
+   public String visit(Identifier n, Map argu) throws Exception {
      //System.out.println("Identifier");
      //System.out.println(n.f0.toString());
      return n.f0.toString();
@@ -573,7 +628,7 @@ public class check extends GJDepthFirst<String, Map> {
    /**
     * f0 -> "this"
     */
-   public String visit(ThisExpression n, Map argu) {
+   public String visit(ThisExpression n, Map argu) throws Exception {
        //System.out.println("ThisExpression");
        return "this " + currentClass;
       //return n.f0.toString();
@@ -612,7 +667,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f1 -> ( TypeDeclaration() )*
    * f2 -> <EOF>
    */
-  public String visit(Goal n, Map argu) {
+  public String visit(Goal n, Map argu) throws Exception {
      ClassTypes = (HashMap) argu;
      n.f0.accept(this, argu);
      n.f1.accept(this, argu);
@@ -640,7 +695,7 @@ public class check extends GJDepthFirst<String, Map> {
    * f16 -> "}"
    * f17 -> "}"
    */
-  public String visit(MainClass n, Map argu) {
+  public String visit(MainClass n, Map argu) throws Exception {
      currentClass = "main";
      // n.f0.accept(this, argu);
      // n.f1.accept(this, argu);
@@ -664,7 +719,30 @@ public class check extends GJDepthFirst<String, Map> {
      return "main";
   }
 
-  Boolean checkIfSuperclass(String classA,String classB) {
+  void check_overload(String classA,String funct) throws Exception {
+    //System.out.println(classA +" "+ classB);
+    ClassForm classF = ClassTypes.get(classA);
+    MethodForm cur_meth = classF.Methods.get(funct);
+    // if(ClassF.Methods.containsKey(funct)) {
+    //   return false;
+    // }
+    String superClass = classF.Isimpliments;
+    while(superClass != null) {
+      classF = ClassTypes.get(superClass);
+      if(classF.Methods.containsKey(funct) ) {
+        MethodForm meth = classF.Methods.get(funct);
+        if(!meth.Arguments.keySet().equals(cur_meth.Arguments.keySet())) {
+          String Message = "minijava doesn't support overload";
+          throw new MyException(classA,null,Message);
+        }
+
+      }
+      superClass = classF.Isimpliments;
+    }
+  }
+
+
+  Boolean checkIfSuperclass(String classA,String classB) throws Exception {
     //System.out.println(classA +" "+ classB);
     if(!ClassTypes.containsKey(classB)) {
       return false;
@@ -681,7 +759,7 @@ public class check extends GJDepthFirst<String, Map> {
     return false;
   }
 
-  String check_method_Call(String meth,String className,ArrayList args) {
+  String check_method_Call(String meth,String className,ArrayList args) throws Exception {
     //System.out.println(ClassTypes);
     //System.out.println(className);
     if(className == "main") {
@@ -695,6 +773,9 @@ public class check extends GJDepthFirst<String, Map> {
 
       if(M.Arguments.size() != args.size()) {
         System.out.println("method has different num of args");
+        String methName = "";
+        String Message = "error";
+        throw new MyException(currentClass,methName,Message);
       }
 
       int i = 0;
@@ -703,6 +784,9 @@ public class check extends GJDepthFirst<String, Map> {
         String arg = (String) args.get(i);
         if(!type.equals(arg) &&  !checkIfSuperclass(type,arg)) {
           System.out.println(type + " not equal "+ args.get(i));
+          String methName = "";
+          String Message = "error";
+          throw new MyException(currentClass,methName,Message);
         }
         i++;
       }
@@ -718,9 +802,12 @@ public class check extends GJDepthFirst<String, Map> {
       if(classF.Methods.get(meth) != null) {
         //System.out.println("found it " + meth);
         MethodForm M = classF.Methods.get(meth);
-        System.out.println(M.Arguments.values​() + "  " + args);
-          System.out.println("method has different num of args");
-          if(M.Arguments.size() != args.size() ) {
+        if(M.Arguments.size() != args.size() ) {
+            System.out.println(M.Arguments.values​() + "  " + args);
+            System.out.println("method has different num of args");
+            String methName = "";
+            String Message = "error";
+            throw new MyException(currentClass,methName,Message);
         }
         int i = 0;
         for(String keys : M.Arguments.keySet()) {
@@ -728,6 +815,9 @@ public class check extends GJDepthFirst<String, Map> {
           String arg = (String) args.get(i);
           if(!type.equals(arg) &&  !checkIfSuperclass(type,arg)) {
             System.out.println(type+" not equal "+args.get(i));
+            String methName = "";
+            String Message = "error";
+            throw new MyException(currentClass,methName,Message);
           }
           i++;
         }

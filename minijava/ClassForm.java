@@ -2,16 +2,32 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.ArrayList;
+
 class ClassInfo {
   int offset_var;
   int offset_meth;
-  public HashMap<String,Integer> ClassVarInfo = new HashMap();
-  public HashMap<String,Integer> MethodInfo = new HashMap();
+  public LinkedHashMap<String,Integer> ClassVarInfo = new LinkedHashMap();
+  public LinkedHashMap<String,Integer> MethodInfo = new LinkedHashMap();
 
   public void MyAddMethod(String name,String type) {
-    MethodInfo.put(name,offset_meth);
+    this.MethodInfo.put(name,offset_meth);
     this.offset_meth += 8;
   }
+
+  public void printAll() {
+
+    System.out.println("-------- Vars ----------");
+    for(String keys : this.ClassVarInfo.keySet()) {
+      System.out.println("\t" + keys + "\t" + this.ClassVarInfo.get(keys));
+    }
+
+    System.out.println("-------- Methods ----------");
+    for(String keys : this.MethodInfo.keySet()) {
+      System.out.println("\t" + keys + "\t" + this.MethodInfo.get(keys));
+    }
+
+  }
+
   public void MyAddVar(String name,String type) {
     this.ClassVarInfo.put(name,offset_var);
     if(type.equals("int")) {
@@ -29,8 +45,8 @@ class ClassInfo {
 
 public class ClassForm extends ClassInfo{
   String Isimpliments;
-  public HashMap<String,String> ClassVars = new HashMap();
-  public HashMap<String,MethodForm> Methods = new HashMap();
+  public LinkedHashMap<String,String> ClassVars = new LinkedHashMap();
+  public LinkedHashMap<String,MethodForm> Methods = new LinkedHashMap();
 }
 
 class MethodForm {

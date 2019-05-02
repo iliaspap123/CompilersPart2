@@ -93,19 +93,24 @@ class BBS{
 }
 
 
-class A{
+class A {
       int i;
       boolean flag;
       int j;
+      public int foo(A yolo,int oti) {
+        return 1;
+      }
 }
 
 class B extends A{
+    int i;
     A type;
     int k;
     public int foo(int i,A yolo,int oti) {
       j = k;
+      i = 9;
       if(0) {
-        k = this.foo(k,k,k);
+        k = this.foo(k,yolo,k);
         System.out.println(0);
       }
       else {
