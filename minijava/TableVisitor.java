@@ -135,6 +135,10 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
         meth.Type = n.f1.accept(this, null);
         String funct = n.f2.accept(this, null);
 
+        if(argu.containsKey(funct)) {
+          String Message = "Method "+funct + " is already declared";
+          throw new MyException(currentClass,null,Message);
+        }
         //System.out.println(type+funct+ argu);
         //n.f3.accept(this, vars);
         n.f4.accept(this, meth.Arguments);
@@ -170,6 +174,10 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
  public String visit(FormalParameter n, Map argu) throws Exception {
     String type = n.f0.accept(this, argu);
     String ident = n.f1.accept(this, argu);
+    if(argu.containsKey(ident)) {
+      String Message = "Variable "+ident + " is already declared";
+      throw new MyException(currentClass,null,Message);
+    }
     argu.put(ident,type);
     return type+ident;
  }
@@ -184,6 +192,10 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
      String Type = n.f0.accept(this, argu);
      String Ident = n.f1.accept(this, argu);
      n.f2.accept(this, argu);
+     if(argu.containsKey(Ident)) {
+       String Message = "Variable "+Ident + " is already declared";
+       throw new MyException(currentClass,null,Message);
+     }
      argu.put(Ident,Type);
     // argu.put(Ident,Type);
      //System.out.println(Type + " " + Ident);

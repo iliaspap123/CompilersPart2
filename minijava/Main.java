@@ -21,9 +21,9 @@ class Main {
   	    System.err.println("Program parsed successfully: "+arg);
   	    TableVisitor eval = new TableVisitor();
         Goal root = parser.Goal();
-        System.out.println(root.accept(eval, null));
+        root.accept(eval, null);
         check c = new check();//eval.ClassTypes
-        System.out.println(root.accept(c, eval.ClassTypes));
+        root.accept(c, eval.ClassTypes);
         //System.out.println(" Var Elements");
         //System.out.println("\t" + eval.Table);
         //System.out.println(" Class Elements");

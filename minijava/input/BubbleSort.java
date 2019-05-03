@@ -97,26 +97,30 @@ class A {
       int i;
       boolean flag;
       int j;
-      public int foo(A yolo,int oti) {
-        return 1;
-      }
+      // public int foo(A yolo,int oti) {
+      //   return 1;
+      // }
 }
 
 class B extends A{
     int i;
-    A type;
+    B type;
     int k;
-    public int foo(int i,A yolo,int oti) {
+    public B foo(A yolo,int oti) {
+      B n;
+
+      yolo = this.foo(yolo,k);
+      yolo = new B();
       j = k;
       i = 9;
-      if(0) {
-        k = this.foo(k,yolo,k);
+      if(true) {
+        //k = this.foo(yolo,k);
         System.out.println(0);
       }
       else {
         System.out.println(1);
 
       }
-      return 0;
+      return this.foo(yolo,k);
     }
 }
