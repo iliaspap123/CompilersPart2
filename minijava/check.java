@@ -95,7 +95,7 @@ public class check extends GJDepthFirst<String, Map> {
         all_vars.putAll(meth.Arguments);
         all_vars.putAll(meth.Vars);
       }
-      all_vars.putAll(classCur.ClassVars);
+      //all_vars.putAll(classCur.ClassVars);
 
       check_overload(currentClass,funct);
 
@@ -200,7 +200,7 @@ public class check extends GJDepthFirst<String, Map> {
           String[] parts = type.split(" ");
           type = parts[1];
         }
-        if(!type.startsWith("boolean")) { //!type.startsWith("int") &&
+        if(!type.equals("boolean")) { //!type.startsWith("int") &&
           System.out.println("if error "+ type);
           String methName = "";
           String Message = "error";
@@ -224,11 +224,7 @@ public class check extends GJDepthFirst<String, Map> {
           String[] parts = type.split(" ");
           type = parts[1];
         }
-        if(type.startsWith("class ")) {
-          String[] parts = type.split(" ");
-          type = parts[1];
-        }
-        if(!type.startsWith("boolean")) { //!type.startsWith("int") &&
+        if(!type.equals("boolean")) { //!type.startsWith("int") &&
           System.out.println("error while");
           String methName = "";
           String Message = "error";
@@ -247,7 +243,17 @@ public class check extends GJDepthFirst<String, Map> {
       * f4 -> ";"
       */
      public String visit(PrintStatement n, Map argu) throws Exception {
-        n.f2.accept(this, argu);
+        String type = n.f2.accept(this, argu);
+        if(type.startsWith("class ") || type.startsWith("this ")) {
+          String[] parts = type.split(" ");
+          type = parts[1];
+        }
+        if(!type.equals("boolean") && !type.equals("int")) {
+          System.out.println("error PrintStatement");
+          String methName = "";
+          String Message = "error: in print PrintStatement"+type;
+          throw new MyException(currentClass,methName,Message);
+        }
         return "print";
      }
 
@@ -274,14 +280,10 @@ public class check extends GJDepthFirst<String, Map> {
         //System.out.println( type+" mphka "+expr);
         String[] parts = expr.split(" ");
         expr = parts[1];
-        if( type.equals(expr) || checkIfSuperclass(type,expr) ) {
-          //System.out.println(type +" mphka2 "+expr);
-          return null;
-        }
       }
       //System.out.println(type+" proerror "+expr);
 
-      if( !type.equals(expr)) {
+      if( !type.equals(expr) && !checkIfSuperclass(type,expr)) {
         System.out.println("AssignmentStatement: " +argu.get(ident)+" error "+expr);
         String methName = "";
         String Message = "error";
@@ -713,12 +715,12 @@ public class check extends GJDepthFirst<String, Map> {
 
   String check_var(String var,String className) {
     //System.out.println("var " +var +" --- className "+ className);
-    if(className == "main") {
-      return null;
-    }
+    // if(className == "main") {
+    //   return null;
+    // }
     //System.out.println("funct: I will check in super_classes of "+ className);
     ClassForm classF = ClassTypes.get(className);
-    if(classF.ClassVars.get(var) != null) {
+    if(classF.ClassVars.containsKey(var)) {
       //System.out.println("found it " + var);
       return classF.ClassVars.get(var);
     }
@@ -772,26 +774,26 @@ public class check extends GJDepthFirst<String, Map> {
    * f17 -> "}"
    */
   public String visit(MainClass n, Map argu) throws Exception {
-     currentClass = "main";
-     // n.f0.accept(this, argu);
-     // n.f1.accept(this, argu);
-     // n.f2.accept(this, argu);
-     // n.f3.accept(this, argu);
-     // n.f4.accept(this, argu);
-     // n.f5.accept(this, argu);
-     // n.f6.accept(this, argu);
-     // n.f7.accept(this, argu);
-     // n.f8.accept(this, argu);
-     // n.f9.accept(this, argu);
-     // n.f10.accept(this, argu);
-     // n.f11.accept(this, argu);
-     // n.f12.accept(this, argu);
-     // n.f13.accept(this, argu);
-     // n.f14.accept(this, argu);
-     // n.f15.accept(this, argu);
-     // n.f16.accept(this, argu);
-     // n.f17.accept(this, argu);
+     String className = n.f1.accept(this, argu);
+     currentClass = className;
+     //n.f11.accept(this, argu);
+     //n.f14.accept(this, argu);
+     ClassForm classF = (ClassForm) argu.get(className);
+     classCur = classF;
 
+     MethodForm meth= classF.Methods.get("main");
+
+     HashMap all_vars = new HashMap();
+     for(String key : meth.Arguments.keySet()) {
+       if(meth.Vars.containsKey(key)) {
+         String Message = "variable "+key+ " is already defined in method";
+         throw new MyException(currentClass,"main",Message);
+       }
+     }
+     all_vars.putAll(meth.Arguments);
+     all_vars.putAll(meth.Vars);
+
+     n.f15.accept(this, all_vars);
      return "main";
   }
 
@@ -872,9 +874,9 @@ public class check extends GJDepthFirst<String, Map> {
   String check_method_Call(String meth,String className,ArrayList args) throws Exception {
     //System.out.println(ClassTypes);
     //System.out.println(className);
-    if(className == "main") {
-      return "main";
-    }
+    // if(className == "main") {
+    //   return "main";
+    // }
     ClassForm classF = ClassTypes.get(className);
     if(classF.Methods.get(meth) != null) {
       //System.out.println("found meth it " + meth);

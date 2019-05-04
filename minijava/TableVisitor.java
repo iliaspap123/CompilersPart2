@@ -24,15 +24,17 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
       */
      public String visit(ClassDeclaration n, Map argu) throws Exception {
 
-        //n.f0.accept(this, argu);
         String className = n.f1.accept(this, argu);
         currentClass = className;
-        //n.f2.accept(this, argu);
+
+        if(ClassTypes.containsKey(className)) {
+          String Message = "double decleration of class "+className;
+          throw new MyException(className,null,Message);
+        }
 
         ClassForm elem = new ClassForm();
         ClassTypes.put(className,elem);
 
-        //String varDecl = n.f3.accept(this, argu);
         if(n.f3.present()) {
           n.f3.accept(this, elem.ClassVars);
           for(String key : elem.ClassVars.keySet()) {
@@ -72,7 +74,12 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
         //n.f0.accept(this, argu);
 
         String className = n.f1.accept(this, argu);
+        currentClass = className;
 
+        if(ClassTypes.containsKey(className)) {
+          String Message = "double decleration of class "+className;
+          throw new MyException(className,null,Message);
+        }
 
         ClassForm elem = new ClassForm();
         ClassTypes.put(className,elem);
@@ -81,16 +88,21 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
         //n.f2.accept(this, argu);
         elem.Isimpliments = n.f3.accept(this, argu);
         if(!ClassTypes.containsKey(elem.Isimpliments) || className.equals(elem.Isimpliments)) {
-          String Message = "extended class is not declared yet";
+          String Message = "extended class has not declared yet";
           throw new MyException(className,null,Message);
         }
-        //n.f4.accept(this, argu);
+
+        ClassForm super_elem = ClassTypes.get(elem.Isimpliments);
+
         if(n.f5.present()) {
           n.f5.accept(this, elem.ClassVars);
           for(String key : elem.ClassVars.keySet()) {
             LinkedHashMap<String,String> tmpClassF = elem.ClassVars;
             //System.out.println(className+"."+key+"      "+tmpClassF.get(key));
+            elem.offset_var = super_elem.offset_var;
+            elem.offset_meth = super_elem.offset_meth;
             elem.MyAddVar(className+"."+key,tmpClassF.get(key));
+            // System.out.println(elem.offset_var + " , " + elem.offset_meth);
           }
         }
         if(n.f6.present()) {
@@ -99,7 +111,9 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
             LinkedHashMap<String,MethodForm> tmpMeth = elem.Methods;
             MethodForm methF = tmpMeth.get(key);
             //System.out.println(className+"."+key+"      "+methF.Type);
-            elem.MyAddMethod(className+"."+key,methF.Type);
+            if(!super_elem.Methods.containsKey(key)) {
+              elem.MyAddMethod(className+"."+key,methF.Type);
+            }
           }
         }
         //n.f7.accept(this, argu);
@@ -263,53 +277,47 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
       return n.f0.toString()+n.f1.toString()+n.f2.toString();
    }
 
-      //
-      // /**
-      //  * f0 -> "class"
-      //  * f1 -> Identifier()
-      //  * f2 -> "{"
-      //  * f3 -> "public"
-      //  * f4 -> "static"
-      //  * f5 -> "void"
-      //  * f6 -> "main"
-      //  * f7 -> "("
-      //  * f8 -> "String"
-      //  * f9 -> "["
-      //  * f10 -> "]"
-      //  * f11 -> Identifier()
-      //  * f12 -> ")"
-      //  * f13 -> "{"
-      //  * f14 -> ( VarDeclaration() )*
-      //  * f15 -> ( Statement() )*
-      //  * f16 -> "}"
-      //  * f17 -> "}"
-      //  */
-      // public String visit(MainClass n, Map argu) throws Exception {
-      //    n.f0.accept(this, argu);
-      //    String className = n.f1.accept(this, argu);
-      //
-      //    ClassForm elem = new ClassForm();
-      //    ClassTypes.put(className,elem);
-      //
-      //    n.f2.accept(this, argu);
-      //    n.f3.accept(this, argu);
-      //    n.f4.accept(this, argu);
-      //    n.f5.accept(this, argu);
-      //    n.f6.accept(this, argu);
-      //    n.f7.accept(this, argu);
-      //    n.f8.accept(this, argu);
-      //    n.f9.accept(this, argu);
-      //    n.f10.accept(this, argu);
-      //    n.f11.accept(this, argu);
-      //    n.f12.accept(this, argu);
-      //    n.f13.accept(this, argu);
-      //    HashMap<String,String> vars = new HashMap();
-      //    n.f14.accept(this, vars);
-      //    elem.Methods.put("main",vars);
-      //    n.f15.accept(this, argu);
-      //    n.f16.accept(this, argu);
-      //    n.f17.accept(this, argu);
-      //    //System.out.println(className+" "+name+" "+arg);
-      //    return className;
-      // }
+
+      /**
+       * f0 -> "class"
+       * f1 -> Identifier()
+       * f2 -> "{"
+       * f3 -> "public"
+       * f4 -> "static"
+       * f5 -> "void"
+       * f6 -> "main"
+       * f7 -> "("
+       * f8 -> "String"
+       * f9 -> "["
+       * f10 -> "]"
+       * f11 -> Identifier()
+       * f12 -> ")"
+       * f13 -> "{"
+       * f14 -> ( VarDeclaration() )*
+       * f15 -> ( Statement() )*
+       * f16 -> "}"
+       * f17 -> "}"
+       */
+      public String visit(MainClass n, Map argu) throws Exception {
+         String className = n.f1.accept(this, argu);
+         currentClass = className;
+
+         ClassForm elem = new ClassForm();
+         ClassTypes.put(className,elem);
+
+         MethodForm main_method = new MethodForm();
+
+
+         elem.Methods.put("main",main_method);
+
+         main_method.Type = "void";
+         main_method.Arguments.put(n.f11.accept(this, argu),"String[]");
+
+         // elem.MyAddMethod(className+"."+"main",main_method.Type);
+
+
+         n.f14.accept(this, main_method.Vars);
+         //n.f15.accept(this, argu);
+         return className;
+      }
 }

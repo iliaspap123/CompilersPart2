@@ -1,28 +1,491 @@
-./input/errors/BadAssign2.java
-./input/errors/BadAssign.java
-./input/errors/Classes-error.java
-./input/errors/DoubleDeclaration1.java
-./input/errors/DoubleDeclaration4.java
+./input/Add.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/ArrayTest.java
+-------- Vars ----------
+-------- Methods ----------
+	Test.start	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/BinaryTree.java
+-------- Vars ----------
+-------- Methods ----------
+	BT.Start	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	Tree.left	0
+	Tree.right	8
+	Tree.key	16
+	Tree.has_left	20
+	Tree.has_right	21
+	Tree.my_null	22
+-------- Methods ----------
+	Tree.Init	0
+	Tree.SetRight	8
+	Tree.SetLeft	16
+	Tree.GetRight	24
+	Tree.GetLeft	32
+	Tree.GetKey	40
+	Tree.SetKey	48
+	Tree.GetHas_Right	56
+	Tree.GetHas_Left	64
+	Tree.SetHas_Left	72
+	Tree.SetHas_Right	80
+	Tree.Compare	88
+	Tree.Insert	96
+	Tree.Delete	104
+	Tree.Remove	112
+	Tree.RemoveRight	120
+	Tree.RemoveLeft	128
+	Tree.Search	136
+	Tree.Print	144
+	Tree.RecPrint	152
+	{left=Tree, right=Tree, key=int, has_left=boolean, has_right=boolean, my_null=Tree}
+./input/BubbleSort.java
+-------- Vars ----------
+	A.i	0
+	A.flag	4
+	A.j	5
+-------- Methods ----------
+	{i=int, flag=boolean, j=int}
+-------- Vars ----------
+	BBS.number	0
+	BBS.size	8
+-------- Methods ----------
+	BBS.Start	0
+	BBS.Sort	8
+	BBS.Print	16
+	BBS.Init	24
+	{number=int[], size=int}
+-------- Vars ----------
+	B.i	0
+	B.type	9
+	B.k	9
+-------- Methods ----------
+	B.foo	0
+	{i=int, type=B, k=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/CallFromSuper.java
+-------- Vars ----------
+-------- Methods ----------
+	A.foo	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/Classes.java
+-------- Vars ----------
+-------- Methods ----------
+	Derived.set	0
+	{}
+-------- Vars ----------
+	Base.data	0
+-------- Methods ----------
+	Base.set	0
+	Base.get	8
+	{data=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/DerivedCall.java
+-------- Vars ----------
+	A.a	0
+-------- Methods ----------
+	{a=int}
+-------- Vars ----------
+	B.b	0
+-------- Methods ----------
+	{b=int}
+-------- Vars ----------
+-------- Methods ----------
+	F.foo	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/error1.java
+./input/errors
+./input/Example1.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	Test1.fielda	0
+-------- Methods ----------
+	Test1.Start	0
+	{fielda=int}
+./input/Factorial-error.java
+./input/Factorial.java
 -------- Vars ----------
 -------- Methods ----------
 	{}
 -------- Vars ----------
 -------- Methods ----------
+	Fac.ComputeFac	0
 	{}
-./input/errors/DoubleDeclaration6.java
-./input/errors/NoMatchingMethod.java
-./input/errors/NoMethod.java
-./input/errors/Overload1.java
-./input/errors/test18.java
-./input/errors/test21.java
-error2 ArrayAssignmentStatementint[]booleanint
-./input/errors/test35.java
+./input/FieldAndClassConflict.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	A.A	0
+-------- Methods ----------
+	A.B	0
+	{A=A}
+-------- Vars ----------
+	B.A	0
+-------- Methods ----------
+	{A=B}
+./input/LinearSearch-error.java
+./input/LinearSearch.java
+-------- Vars ----------
+	LS.number	0
+	LS.size	8
+-------- Methods ----------
+	LS.Start	0
+	LS.Print	8
+	LS.Search	16
+	LS.Init	24
+	{number=int[], size=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/LinkedList-error.java
+./input/LinkedList.java
+-------- Vars ----------
+-------- Methods ----------
+	LL.Start	0
+	{}
+-------- Vars ----------
+	Element.Age	0
+	Element.Salary	4
+	Element.Married	8
+-------- Methods ----------
+	Element.Init	0
+	Element.GetAge	8
+	Element.GetSalary	16
+	Element.GetMarried	24
+	Element.Equal	32
+	Element.Compare	40
+	{Age=int, Salary=int, Married=boolean}
+-------- Vars ----------
+	List.elem	0
+	List.next	8
+	List.end	16
+-------- Methods ----------
+	List.Init	0
+	List.InitNew	8
+	List.Insert	16
+	List.SetNext	24
+	List.Delete	32
+	List.Search	40
+	List.GetEnd	48
+	List.GetElem	56
+	List.GetNext	64
+	List.Print	72
+	{elem=Element, next=List, end=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/Main.java
+-------- Vars ----------
+	B.aaa	0
+	B.we	12
+-------- Methods ----------
+	B.test	8
+	{aaa=int, we=int}
+-------- Vars ----------
+	ArrayTest.weee	0
+	ArrayTest.wre	4
+	ArrayTest.aaa	8
+-------- Methods ----------
+	ArrayTest.test	0
+	{weee=int, wre=int, aaa=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/ManyClasses.java
+-------- Vars ----------
+	A.data	0
+-------- Methods ----------
+	A.get	0
+	{data=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	B.set	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	C.reset	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/MiniJavaParserConstants.java
+-------- Vars ----------
+	BBS.number	0
+	BBS.size	8
+-------- Methods ----------
+	BBS.Start	0
+	BBS.Sort	8
+	BBS.Print	16
+	BBS.Init	24
+	{number=int[], size=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/MoreThan4-error.java
+method has different num of args
+./input/MoreThan4.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	MT4.Start	0
+	MT4.Change	8
+	{}
+./input/OutOfBounds1.java
+-------- Vars ----------
+-------- Methods ----------
+	A.run	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/Overload2.java
+-------- Vars ----------
+	A.x	0
+-------- Methods ----------
+	A.x	0
+	{x=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/QuickSort-error.java
+./input/QuickSort.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	QS.number	0
+	QS.size	8
+-------- Methods ----------
+	QS.Start	0
+	QS.Sort	8
+	QS.Print	16
+	QS.Init	24
+	{number=int[], size=int}
+./input/ShadowBaseField.java
+-------- Vars ----------
+	A.x	0
+-------- Methods ----------
+	A.getX	0
+	{x=int}
+-------- Vars ----------
+	B.x	0
+-------- Methods ----------
+	B.getX	8
+	{x=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/ShadowField.java
+-------- Vars ----------
+	A.x	0
+-------- Methods ----------
+	A.foo	0
+	A.get	8
+	{x=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test06.java
+-------- Vars ----------
+	Operator.op1bool	0
+	Operator.op2bool	1
+	Operator.op1int	2
+	Operator.op2int	6
+	Operator.result	10
+-------- Methods ----------
+	Operator.compute	0
+	{op1bool=boolean, op2bool=boolean, op1int=int, op2int=int, result=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test07.java
+-------- Vars ----------
+	Operator.op1bool	0
+	Operator.op2bool	1
+	Operator.op1int	2
+	Operator.op2int	6
+	Operator.result	10
+-------- Methods ----------
+	Operator.compute	0
+	{op1bool=boolean, op2bool=boolean, op1int=int, op2int=int, result=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test15.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	Test.i	0
+	Test.k	4
+-------- Methods ----------
+	Test.start	0
+	Test.mutual1	8
+	Test.mutual2	16
+	{i=int, k=int}
+./input/test17.java
+-------- Vars ----------
+	Test.i	0
+-------- Methods ----------
+	Test.start	0
+	Test.first	8
+	Test.second	16
+	{i=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test20.java
+-------- Vars ----------
+	A23.i1	0
+	A23.i2	4
+	A23.i3	8
+-------- Methods ----------
+	A23.init	0
+	A23.getI1	8
+	A23.setI1	16
+	{i1=int, i2=int, i3=int}
+-------- Vars ----------
+	B23.i1	0
+	B23.i4	12
+-------- Methods ----------
+	B23.init	24
+	B23.getI1	32
+	B23.setI1	40
+	{i1=int, i4=int}
+-------- Vars ----------
+	C23.i1	0
+	C23.i5	12
+-------- Methods ----------
+	C23.init	48
+	C23.getI1	56
+	C23.setI1	64
+	{i1=int, i5=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test62.java
 -------- Vars ----------
 	Test.test	0
 -------- Methods ----------
 	Test.start	0
 	{test=Test}
-./input/errors/test52.java
-AssignmentStatement: boolean error int
-./input/errors/test68.java
-./input/errors/UseArgs.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test73.java
+-------- Vars ----------
+-------- Methods ----------
+	Test.start	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test82.java
+-------- Vars ----------
+	Test.test	0
+	Test.b	8
+-------- Methods ----------
+	Test.start	0
+	Test.next	8
+	{test=Test, b=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test93.java
+-------- Vars ----------
+	Test.test	0
+	Test.i	8
+-------- Methods ----------
+	Test.start	0
+	Test.next	8
+	{test=Test, i=int[]}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+./input/test99.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	Test.test	0
+	Test.i	8
+-------- Methods ----------
+	Test.start	0
+	Test.next	8
+	{test=Test, i=int}
+./input/TreeVisitor-error.java
+peta error
+./input/TreeVisitor.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	TV.Start	0
+	{}
+-------- Vars ----------
+	Visitor.l	0
+	Visitor.r	8
+-------- Methods ----------
+	Visitor.visit	0
+	{l=Tree, r=Tree}
+-------- Vars ----------
+	Tree.left	0
+	Tree.right	8
+	Tree.key	16
+	Tree.has_left	20
+	Tree.has_right	21
+	Tree.my_null	22
+-------- Methods ----------
+	Tree.Init	0
+	Tree.SetRight	8
+	Tree.SetLeft	16
+	Tree.GetRight	24
+	Tree.GetLeft	32
+	Tree.GetKey	40
+	Tree.SetKey	48
+	Tree.GetHas_Right	56
+	Tree.GetHas_Left	64
+	Tree.SetHas_Left	72
+	Tree.SetHas_Right	80
+	Tree.Compare	88
+	Tree.Insert	96
+	Tree.Delete	104
+	Tree.Remove	112
+	Tree.RemoveRight	120
+	Tree.RemoveLeft	128
+	Tree.Search	136
+	Tree.Print	144
+	Tree.RecPrint	152
+	Tree.accept	160
+	{left=Tree, right=Tree, key=int, has_left=boolean, has_right=boolean, my_null=Tree}
+-------- Vars ----------
+-------- Methods ----------
+	MyVisitor.visit	0
+	{}
