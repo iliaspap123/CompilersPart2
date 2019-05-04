@@ -13,7 +13,7 @@ class Main {
 	    System.exit(1);
 	}
 	FileInputStream fis = null;
-  for(String arg: args) {
+  for(String arg: args) { // for all arguments
   	try{
         System.out.println(arg);
   	    fis = new FileInputStream(arg);
@@ -22,32 +22,21 @@ class Main {
   	    TableVisitor eval = new TableVisitor();
         Goal root = parser.Goal();
         root.accept(eval, null);
-        check c = new check();//eval.ClassTypes
+
+        // semantic analysis //
+        check c = new check();
         root.accept(c, eval.ClassTypes);
-        //System.out.println(" Var Elements");
-        //System.out.println("\t" + eval.Table);
-        //System.out.println(" Class Elements");
-        // System.out.println("\t" + eval.ClassTypes);
+
+        System.err.println("Program is semantically correct");
+
+
+        // for all classes print offsets //
         for(String keys : eval.ClassTypes.keySet()) {
-          //System.out.println("\t" + keys);
-          //System.out.println("\t" + eval.ClassTypes.get(keys));
           ClassForm M = eval.ClassTypes.get(keys);
 
           M.printAll();
           System.out.println("\t" + M.ClassVars);
-          //System.out.println("\t" + M.Methods);
-          // for(String keys2 : M.Methods.keySet()) {
-          //   System.out.println("\t" + keys2);
-          //   //System.out.println("\t" + eval.ClassTypes.get(keys));
-          //   MethodForm meth = M.Methods.get(keys2);
-          //   // for(String keys3 : meth.Arguments.keySet()) {
-          //   //   System.out.println("\t" + keys3);
-          //   // }
-          //   System.out.println("\t" + meth.Arguments);
-          //   System.out.println("\t" + meth.Vars);
-          // }
         }
-        //Goal root = parser.Goal();
 
   	}
   	catch(ParseException ex){

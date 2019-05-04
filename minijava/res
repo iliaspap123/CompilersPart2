@@ -1,0 +1,122 @@
+input/test06.java
+-------- Vars ----------
+	Operator.op1bool	0
+	Operator.op2bool	1
+	Operator.op1int	2
+	Operator.op2int	6
+	Operator.result	10
+-------- Methods ----------
+	Operator.compute	0
+	{op1bool=boolean, op2bool=boolean, op1int=int, op2int=int, result=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test07.java
+-------- Vars ----------
+	Operator.op1bool	0
+	Operator.op2bool	1
+	Operator.op1int	2
+	Operator.op2int	6
+	Operator.result	10
+-------- Methods ----------
+	Operator.compute	0
+	{op1bool=boolean, op2bool=boolean, op1int=int, op2int=int, result=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test15.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	Test.i	0
+	Test.k	4
+-------- Methods ----------
+	Test.start	0
+	Test.mutual1	8
+	Test.mutual2	16
+	{i=int, k=int}
+input/test17.java
+-------- Vars ----------
+	Test.i	0
+-------- Methods ----------
+	Test.start	0
+	Test.first	8
+	Test.second	16
+	{i=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test20.java
+-------- Vars ----------
+	A23.i1	0
+	A23.i2	4
+	A23.i3	8
+-------- Methods ----------
+	A23.init	0
+	A23.getI1	8
+	A23.setI1	16
+	{i1=int, i2=int, i3=int}
+-------- Vars ----------
+	B23.i1	12
+	B23.i4	12
+-------- Methods ----------
+	{i1=int, i4=int}
+-------- Vars ----------
+	C23.i1	16
+	C23.i5	16
+-------- Methods ----------
+	{i1=int, i5=int}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test62.java
+-------- Vars ----------
+	Test.test	0
+-------- Methods ----------
+	Test.start	0
+	{test=Test}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test73.java
+-------- Vars ----------
+-------- Methods ----------
+	Test.start	0
+	{}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test82.java
+-------- Vars ----------
+	Test.test	0
+	Test.b	8
+-------- Methods ----------
+	Test.start	0
+	Test.next	8
+	{test=Test, b=boolean}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test93.java
+-------- Vars ----------
+	Test.test	0
+	Test.i	8
+-------- Methods ----------
+	Test.start	0
+	Test.next	8
+	{test=Test, i=int[]}
+-------- Vars ----------
+-------- Methods ----------
+	{}
+input/test99.java
+-------- Vars ----------
+-------- Methods ----------
+	{}
+-------- Vars ----------
+	Test.test	0
+	Test.i	8
+-------- Methods ----------
+	Test.start	0
+	Test.next	8
+	{test=Test, i=int}
