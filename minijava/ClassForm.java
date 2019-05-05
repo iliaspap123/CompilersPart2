@@ -14,18 +14,19 @@ class ClassInfo {
     this.offset_meth += 8;
   }
 
-  public void printAll() {
+  public void printAll(String className) {
 
-    System.out.println("-------- Vars ----------");
+    System.out.println("-----------Class "+ className+ "-----------");
+    System.out.println("--Variables---");
     for(String keys : this.ClassVarInfo.keySet()) {
-      System.out.println("\t" + keys + "\t" + this.ClassVarInfo.get(keys));
+      System.out.println(keys + ": " + this.ClassVarInfo.get(keys));
     }
 
-    System.out.println("-------- Methods ----------");
+    System.out.println("---Methods---");
     for(String keys : this.MethodInfo.keySet()) {
-      System.out.println("\t" + keys + "\t" + this.MethodInfo.get(keys));
+      System.out.println(keys + ": " + this.MethodInfo.get(keys));
     }
-
+    System.out.println("");
   }
 
   public void MyAddVar(String name,String type) {

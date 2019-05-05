@@ -9,7 +9,7 @@ class BubbleSort{
 // methods to initialize, print and sort the array
 // using Bublesort
 class BBS{
-
+    
     int[] number ;
     int size ;
 
@@ -25,7 +25,7 @@ class BBS{
 	return 0 ;
     }
 
-
+ 
     // Sort array of integers using Bublesort method
     public int Sort(){
 	int nt ;
@@ -70,57 +70,24 @@ class BBS{
 	}
 	return 0 ;
     }
-
+    
     // Initialize array of integers
     public int Init(int sz){
 	size = sz ;
 	number = new int[sz] ;
-
+	
 	number[0] = 20 ;
-	number[1] = 7  ;
+	number[1] = 7  ; 
 	number[2] = 12 ;
 	number[3] = 18 ;
-	number[4] = 2  ;
+	number[4] = 2  ; 
 	number[5] = 11 ;
-	number[6] = 6  ;
-	number[7] = 9  ;
-	number[8] = 19 ;
+	number[6] = 6  ; 
+	number[7] = 9  ; 
+	number[8] = 19 ; 
 	number[9] = 5  ;
-
-	return 0 ;
+	
+	return 0 ;	
     }
 
-}
-
-
-class A {
-      int i;
-      boolean flag;
-      int j;
-      // public int foo(A yolo,int oti) {
-      //   return 1;
-      // }
-}
-
-class B extends A{
-    int i;
-    B type;
-    int k;
-    public B foo(A yolo,int oti) {
-      B n;
-
-      yolo = this.foo(yolo,k);
-      yolo = new B();
-      j = k;
-      i = 9;
-      if(true) {
-        //k = this.foo(yolo,k);
-        System.out.println(0);
-      }
-      else {
-        System.out.println(1);
-
-      }
-      return this.foo(yolo,k);
-    }
 }

@@ -85,12 +85,12 @@ public class TableVisitor extends GJDepthFirst<String, Map> {
 
     ClassForm super_elem = ClassTypes.get(elem.Isimpliments);
 
+    elem.offset_var = super_elem.offset_var; // take superClass offsets
+    elem.offset_meth = super_elem.offset_meth;
     if(n.f5.present()) {
       n.f5.accept(this, elem.ClassVars);
       for(String key : elem.ClassVars.keySet()) {
         LinkedHashMap<String,String> tmpClassF = elem.ClassVars;
-        elem.offset_var = super_elem.offset_var; // take superClass offsets
-        elem.offset_meth = super_elem.offset_meth;
         elem.MyAddVar(className+"."+key,tmpClassF.get(key));
       }
     }

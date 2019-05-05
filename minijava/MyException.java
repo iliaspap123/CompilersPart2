@@ -11,8 +11,13 @@ public class MyException extends Exception {
   }
 
   public String getMessage() {
-    //System.err.println("In class: " + ClassName + " In Method: " + MethodName + " with message: " + Message);
-    String Myerror = "In class: " + ClassName + " In Method: " + MethodName + " with message: " + Message;
+    String Myerror = null;
+    if(MethodName == null) {
+      Myerror = "In class: " + ClassName + " with message: " + Message;
+    }
+    else {
+      Myerror = "In class: " + ClassName + " In Method: " + MethodName + " with message: " + Message;
+    }
     return Myerror;
   }
 

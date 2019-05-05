@@ -34,8 +34,7 @@ class Main {
         for(String keys : eval.ClassTypes.keySet()) {
           ClassForm M = eval.ClassTypes.get(keys);
 
-          M.printAll();
-          System.out.println("\t" + M.ClassVars);
+          M.printAll(keys);
         }
 
   	}
